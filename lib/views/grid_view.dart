@@ -66,6 +66,9 @@ class Gridview extends StatelessWidget {
                           rowHoverColor: Colors.greenAccent[100],
                         ),
                         child: SfDataGrid(
+                          isScrollbarAlwaysShown: true,
+                          showVerticalScrollbar: true,
+        showHorizontalScrollbar: true,
                           gridLinesVisibility: GridLinesVisibility.both,
                           headerGridLinesVisibility: GridLinesVisibility.both,
                           columnWidthMode: Platform.isAndroid
