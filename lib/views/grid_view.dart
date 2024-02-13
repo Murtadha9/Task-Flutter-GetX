@@ -12,7 +12,7 @@ import 'package:list90/models/my_data_source.dart';
 class Gridview extends StatelessWidget {
   final GridController controller = Get.put(GridController());
 
-  Gridview({Key? key});
+  Gridview({super.key,});
 
   @override
   Widget build(BuildContext context) {
@@ -91,6 +91,7 @@ class Gridview extends StatelessWidget {
                             width: controller.columnWidths[columnName]!,
                             columnName: columnName,
                             visible: controller.columnVisibility[columnName]!,
+                            minimumWidth: 100,
                             label: Container(
                             padding: const EdgeInsets.all(16.0),
                             alignment: Alignment.center,
@@ -113,6 +114,7 @@ class Gridview extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
+              
               children: [
                 MaterialButton(
                   onPressed: () {
@@ -122,14 +124,14 @@ class Gridview extends StatelessWidget {
                   color: Colors.greenAccent,
                   elevation: 5.0,
                   height: 60.0,
-                  minWidth: 200.0,
+                  minWidth:Platform.isAndroid? 100.0:200.0,
                   padding: const EdgeInsets.all(16.0),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12.0),
                   ),
                   child: const Text('Edit'),
                 ),
-                SizedBox(width: 20.0,),
+                const SizedBox(width: 10.0,),
                 MaterialButton(
                   onPressed: () {
                     showDialog(
@@ -144,7 +146,7 @@ class Gridview extends StatelessWidget {
                   color: Colors.greenAccent,
                   elevation: 5.0,
                   height: 60.0,
-                  minWidth: 200.0,
+                  minWidth:Platform.isAndroid? 100.0:200.0,
                   padding: const EdgeInsets.all(16.0),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12.0),

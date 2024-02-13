@@ -9,6 +9,7 @@ class AddProductDialog extends StatefulWidget {
   const AddProductDialog(this.addProductCallback, {super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _AddProductDialogState createState() => _AddProductDialogState();
 }
 

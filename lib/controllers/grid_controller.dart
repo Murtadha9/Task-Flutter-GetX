@@ -33,7 +33,7 @@ class GridController extends GetxController {
   void onInit() {
 
 
-     final savedProductData = box.read<List<dynamic>>('productData') as List<dynamic>?;
+     final savedProductData = box.read<List<dynamic>>('productData');
     if (savedProductData != null) {
       productData.addAll(savedProductData.map((data) => Product.fromMap(data as Map<String, dynamic>)));
     } else {

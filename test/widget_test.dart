@@ -9,11 +9,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:list90/main.dart';
+import 'package:list90/controllers/grid_controller.dart';
+
+
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+    // Create a GridController instance
+    GridController controller = GridController();
+
+    // Build our app and trigger a frame with the controller
+    await tester.pumpWidget(MyApp(controller: controller));
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);

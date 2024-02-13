@@ -15,7 +15,7 @@ void main() async {
 class MyApp extends StatelessWidget {
   final GridController controller;
 
-  const MyApp({required this.controller, Key? key}) : super(key: key);
+  const MyApp({required this.controller, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       getPages: [
         GetPage(name: '/', page: () => Gridview()),
+        
          
       ],
     );
