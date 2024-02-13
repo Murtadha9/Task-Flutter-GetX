@@ -129,7 +129,7 @@ class Gridview extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12.0),
                   ),
-                  child: const Text('Edit'),
+                  child: const Text('Editt'),
                 ),
                 const SizedBox(width: 10.0,),
                 MaterialButton(
